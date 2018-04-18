@@ -1,7 +1,7 @@
-import archiver from 'archiver'
-import _ from 'lodash'
-import path from 'path'
-import S3 from './s3'
+import archiver from 'archiver';
+import _ from 'lodash';
+import path from 'path';
+import S3 from './s3';
 
 export default class FileArchiver{
 

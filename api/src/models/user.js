@@ -1,18 +1,13 @@
-import _ from 'lodash'
-import bcrypt from 'bcrypt'
-
+import _ from 'lodash';
+import bcrypt from 'bcrypt';
 
 const saltRounds = 10;
 
 export default class User{
 
-
-
 	constructor(app){
 
 		this.app = app;
-
-
 
 		this.model = {
 			name: null,
@@ -21,7 +16,6 @@ export default class User{
 			created: new Date(),
 			updated: null,
 		}
-
 
 		this.findUserByEmail = this.findUserByEmail.bind(this);
 	}
@@ -56,9 +50,9 @@ export default class User{
 			});
 		}
 
-		
 
-		
+
+
 
 		this.findUserByEmail(model.email, (err, user) => {
 
@@ -85,7 +79,7 @@ export default class User{
 
 		db.collection('users').find(query).limit(1).toArray((err, result) => {
 			return callback(err, _.get(result, '[0]', null));
-		}); 
+		});
 
 
 	}
@@ -96,7 +90,7 @@ export default class User{
 
 		const hashPassword = bcrypt.hashSync(model.password, saltRounds);
 		model.password = hashPassword;
-		
+
 		this.validate((errors) => {
 
 
@@ -111,9 +105,9 @@ export default class User{
 				});
 
 				return cb(_.join(messages, ','), null);
-				
+
 			}
-			
+
 			db.collection('users').insertOne(model, (err, result) => {
 					return cb(err, model);
 			});
@@ -121,7 +115,7 @@ export default class User{
 		});
 
 
-		
+
 
 	}
 

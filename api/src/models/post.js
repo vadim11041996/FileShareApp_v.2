@@ -1,11 +1,10 @@
-import _ from 'lodash'
+import _ from 'lodash';
 
 class Post{
 
     constructor(app){
 
         this.app = app;
-
 
         this.model = {
 

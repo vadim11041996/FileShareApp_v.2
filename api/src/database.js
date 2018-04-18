@@ -1,8 +1,6 @@
 import {MongoClient} from 'mongodb'
 
-
 const url = 'mongodb://localhost:27017/fileapp';
-
 
 export const connect = (callback) => {
 
@@ -10,4 +8,3 @@ export const connect = (callback) => {
         return callback(err, db);
     });
 };
-

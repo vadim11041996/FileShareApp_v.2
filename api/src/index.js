@@ -7,8 +7,8 @@ import multer from 'multer'
 import path from 'path';
 
 import {connect} from "./database";
-import AppRouter from './router'
-import nodemailer from 'nodemailer'
+import AppRouter from './router';
+import nodemailer from 'nodemailer';
 import {smtp, s3Config, s3Region,s3Bucket} from './config'
 
 // Amazon S3 Setup

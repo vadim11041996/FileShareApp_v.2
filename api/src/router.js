@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'path';
 import {version} from '../package.json'
 import _ from 'lodash'
 import File from './models/file'

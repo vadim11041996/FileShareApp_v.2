@@ -3,7 +3,6 @@ import {url} from "./config";
 
 export default class Email {
 
-
     constructor(app){
 
         this.app = app;

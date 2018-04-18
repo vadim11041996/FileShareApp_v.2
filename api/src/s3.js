@@ -8,8 +8,6 @@ export default class S3{
 
     }
 
-
-
     getObject(file){
         const s3 = this.app.s3;
 
