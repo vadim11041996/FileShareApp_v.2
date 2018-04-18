@@ -1,6 +1,5 @@
-import axios from 'axios'
-import {apiUrl} from '../config'
-
+import axios from 'axios';
+import {apiUrl} from '../config';
 
 export const createUser = (user) => {
 

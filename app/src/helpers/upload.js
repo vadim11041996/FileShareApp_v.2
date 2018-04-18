@@ -2,9 +2,7 @@ import axios from 'axios'
 import {apiUrl} from "../config";
 import _ from 'lodash'
 
-
 export const upload = (form, callback = () => {}) => {
-
 
     const url = `${apiUrl}/upload`;
 
@@ -21,7 +19,6 @@ export const upload = (form, callback = () => {}) => {
     data.append('message', _.get(form, 'message'));
 
 
-
     const config = {
 
         onUploadProgress: (event) => {
@@ -36,7 +33,6 @@ export const upload = (form, callback = () => {}) => {
     }
 
     axios.post(url, data, config).then((response) => {
-
 
         // upload successful.
 
