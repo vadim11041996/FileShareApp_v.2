@@ -9,7 +9,6 @@ class HomeForm extends Component {
     constructor(props) {
         super(props);
 
-
         this.state = {
 
             form: {
@@ -33,11 +32,7 @@ class HomeForm extends Component {
         this._formValidation = this._formValidation.bind(this);
         this._onFileAdded = this._onFileAdded.bind(this);
         this._onFileRemove = this._onFileRemove.bind(this)
-
-
     }
-
-
     _onFileRemove(key) {
         let {files} = this.state.form;
 
@@ -49,7 +44,6 @@ class HomeForm extends Component {
                 files: files
             }
         })
-
 
     }
 

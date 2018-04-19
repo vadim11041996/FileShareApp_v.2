@@ -3,9 +3,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 import {betterNumber} from "../helpers";
 
-
 class HomeUploading extends Component{
-
 
     constructor(props){
         super(props);
