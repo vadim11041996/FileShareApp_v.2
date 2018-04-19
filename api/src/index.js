@@ -9,20 +9,17 @@ import path from 'path';
 import {connect} from "./database";
 import AppRouter from './router';
 import nodemailer from 'nodemailer';
-import {smtp, s3Config, s3Region,s3Bucket} from './config'
+import {smtp, s3Config, s3Region,s3Bucket} from './config';
 
 // Amazon S3 Setup
-import AWS from 'aws-sdk'
-import multerS3 from 'multer-s3'
-
+import AWS from 'aws-sdk';
+import multerS3 from 'multer-s3';
 
 AWS.config.update(s3Config);
 
 AWS.config.region = s3Region ;
 
 const s3 = new AWS.S3();
-
-
 
 // Setup Email
 
